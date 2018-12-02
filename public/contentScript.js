@@ -47,11 +47,11 @@ const applyOptions = (options) => {
     }
     document.getElementById('custom-css').innerHTML = options.css;
     customScriptNode.innerHTML = 'window.extensionOptions = ' + JSON.stringify(options, null, 2);
-    setTimeout((options) => {
-        document.getElementById('option-menu').setAttribute('href', options.optionPageURL);
-        document.getElementById('option-menu-icon').setAttribute('src', options.optionIconURL);
-        document.getElementById('option-menu-icon').style.display = 'block';
-    }, 3 * 1000, options);
+    // setTimeout((options) => {
+    //     document.getElementById('option-menu').setAttribute('href', options.optionPageURL);
+    //     document.getElementById('option-menu-icon').setAttribute('src', options.optionIconURL);
+    //     document.getElementById('option-menu-icon').style.display = 'block';
+    // }, 3 * 1000, options);
 };
 
 const messageReceiver = () => {
