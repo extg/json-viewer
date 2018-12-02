@@ -1,0 +1,9 @@
+{
+  "name": "chrome-scripts",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "react-scripts": "2.0.3"
+  }
+}
