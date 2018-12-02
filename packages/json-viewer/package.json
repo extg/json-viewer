@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "chrome-scripts": "^0.0.1"
+    "chrome-scripts": "1.1.5"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -20,10 +20,12 @@
     "eject": "chrome-scripts eject",
     "chrome-ready": "node chrome-ready.js"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }

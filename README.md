@@ -2,13 +2,16 @@
 
 ## Getting started
 
+Install dependencies and bootstrap packages.
+
 ```sh
 yarn
-yarn bootstrap
 ```
 
 
 ## Build
+
+Build extension into `packages/json-viewer/build`
 
 ```sh
 yarn build

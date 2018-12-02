@@ -8,13 +8,6 @@
 
 'use strict';
 
-// Makes the script crash on unhandled rejections instead of silently
-// ignoring them. In the future, promise rejections that are not handled will
-// terminate the Node.js process with a non-zero exit code.
-process.on('unhandledRejection', err => {
-  throw err;
-});
-
 const spawn = require('react-dev-utils/crossSpawn');
 const args = process.argv.slice(2);
 
@@ -40,14 +33,14 @@ switch (script) {
       if (result.signal === 'SIGKILL') {
         console.log(
           'The build failed because the process exited too early. ' +
-          'This probably means the system ran out of memory or someone called ' +
-          '`kill -9` on the process.'
+            'This probably means the system ran out of memory or someone called ' +
+            '`kill -9` on the process.'
         );
       } else if (result.signal === 'SIGTERM') {
         console.log(
           'The build failed because the process exited too early. ' +
-          'Someone might have called `kill` or `killall`, or the system could ' +
-          'be shutting down.'
+            'Someone might have called `kill` or `killall`, or the system could ' +
+            'be shutting down.'
         );
       }
       process.exit(1);
@@ -59,7 +52,7 @@ switch (script) {
     console.log('Unknown script "' + script + '".');
     console.log('Perhaps you need to update react-scripts?');
     console.log(
-      'See: https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases'
+      'See: https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases'
     );
     break;
 }
