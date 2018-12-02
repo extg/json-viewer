@@ -3,10 +3,18 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "bin": {
+    "react-scripts": "./bin/chrome-scripts.js"
+  },
   "devDependencies": {
     "react-scripts": "2.0.3"
   },
-  "scripts": {
-    "eject": "react-scripts eject"
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
