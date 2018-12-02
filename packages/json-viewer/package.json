@@ -19,5 +19,11 @@
     "test": "chrome-scripts test --env=jsdom",
     "eject": "chrome-scripts eject",
     "chrome-ready": "node chrome-ready.js"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

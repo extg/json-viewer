@@ -2,9 +2,9 @@
   "name": "chrome-extools",
   "private": true,
   "scripts": {
+    "postinstall": "lerna bootstrap",
     "start": "cd ./packages/json-viewer && yarn start",
-    "build": "cd ./packages/json-viewer && yarn build",
-    "bootstrap": "lerna bootstrap"
+    "build": "cd ./packages/json-viewer && yarn build"
   },
   "devDependencies": {
     "lerna": "^3.5.1"
