@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.1.5"
+    "chrome-scripts": "^0.0.1"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -13,11 +13,11 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "chrome-scripts start",
+    "build": "chrome-scripts build",
     "postbuild": "npm run chrome-ready",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
+    "test": "chrome-scripts test --env=jsdom",
+    "eject": "chrome-scripts eject",
     "chrome-ready": "node chrome-ready.js"
   }
 }
