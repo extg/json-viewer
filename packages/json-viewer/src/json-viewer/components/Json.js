@@ -7,6 +7,7 @@ import _cn from 'classnames/bind';
 import getComputedTypeOrValue, {getType} from '../getComputedTypeOrValue';
 import css from './Json.module.css';
 
+console.log(css)
 const cx = _cn.bind(css)
 
 const ClosedIcon = () => (

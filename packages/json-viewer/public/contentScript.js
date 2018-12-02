@@ -35,12 +35,7 @@ const applyOptions = (options) => {
     }
     const styleNode = document.getElementById('main-css');
     const customScriptNode = document.getElementById('custom-script');
-    let cssURL = '';
-    if (options.theme === 'default') {
-        cssURL = chrome.extension.getURL('/static/css/' + themes[options.theme]);
-    } else {
-        cssURL = chrome.extension.getURL('/static/css/themes/' + themes[options.theme]);
-    }
+    const cssURL = chrome.extension.getURL('/static/css/' + themes[options.theme]);
 
     if (styleNode.href.indexOf(themes[options.theme] < 0)) {
         styleNode.setAttribute('href', cssURL);

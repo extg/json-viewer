@@ -185,6 +185,9 @@ module.exports = {
                         importLoaders: 1,
                         minimize: true,
                         sourceMap: shouldUseSourceMap,
+                        modules: true,
+                        camelCase: true,
+                        localIdentName: '[folder]-[name]___[local]',
                       },
                     },
                     {

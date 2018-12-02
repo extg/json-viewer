@@ -9,7 +9,7 @@ var fs =require("fs");
     }
 });
 
- exec("cp "+__dirname+"/build/static/js/main*.js "+__dirname+"/build/static/js/main.js", function (error, stdout, stderr) {
+ exec("mv "+__dirname+"/build/static/js/main*.js "+__dirname+"/build/static/js/main.js", function (error, stdout, stderr) {
     if (error !== null) {
         console.log('exec error: ' + error);
     } else{
@@ -25,7 +25,7 @@ exec("mkdir "+__dirname+"/build/static/css/themes", function (error, stdout, std
     }
 });
 
-exec("cp "+__dirname+"/build/static/css/main*.css "+__dirname+"/build/static/css/main.css", function (error, stdout, stderr) {
+exec("mv "+__dirname+"/build/static/css/main*.css "+__dirname+"/build/static/css/main.css", function (error, stdout, stderr) {
     if (error !== null) {
         console.log('exec error: ' + error);
     } else{
