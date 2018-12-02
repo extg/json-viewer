@@ -5,9 +5,9 @@
   "version": "1.0.6",
   "manifest_version": 2,
   "icons": {
-    "16": "images/icons/icon-16.png",
-    "38": "images/icons/icon-32.png",
-    "128": "images/icons/icon-128.png"
+    "16": "icons/icon-16.png",
+    "38": "icons/icon-32.png",
+    "128": "icons/icon-128.png"
   },
   "background": {
     "scripts":[ "static/js/background.js"]
@@ -33,7 +33,7 @@
     }
   ],
   "browser_action": {
-    "default_icon": "images/icons/icon-16.png"
+    "default_icon": "icons/icon-16.png"
   },
   "web_accessible_resources": [
     "/static/js/main.js",

@@ -14,6 +14,12 @@ yarn bootstrap
 yarn build
 ```
 
+Build favicon
+
+```sh
+npx png-to-ico packages/json-viewer/public/icons/icon-48.png > packages/json-viewer/public/favicon.ico
+```
+
 
 ## Features
 

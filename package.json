@@ -2,8 +2,8 @@
   "name": "chrome-extools",
   "private": true,
   "scripts": {
-    "start": "lerna run start --scope=json-viewer --parallel --stream",
-    "build": "lerna run build --scope=json-viewer --parallel --stream",
+    "start": "cd ./packages/json-viewer && yarn start",
+    "build": "cd ./packages/json-viewer && yarn build",
     "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
