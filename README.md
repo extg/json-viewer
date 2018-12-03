@@ -1,6 +1,6 @@
 # Chrome DevTools JSON Viewer
 
-<image src="screenshot2.jpg" width="400"/>
+<image src="screenshot3.jpg" width="400"/>
 
 
 ## Getting started
