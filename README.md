@@ -1,6 +1,6 @@
 # Chrome DevTools JSON Viewer
 
-![Screenshot](./screenshot.jpg)
+![Screenshot](./screenshot1.jpg)
 
 ## Getting started
 
