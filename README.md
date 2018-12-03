@@ -1,6 +1,6 @@
 # Chrome DevTools JSON Viewer
 
-![Screenshot](./screenshot1.jpg =400x)
+<image src="screenshot1.jpg" width="400"/>
 
 ## Getting started
 
@@ -40,8 +40,8 @@ npx png-to-ico packages/json-viewer/public/icons/icon-48.png > packages/json-vie
 
 ```sh
 cp .env.example .env
-# Enter credentials
-# sh ./release-to-chrome-web-store.sh
+# Setup credentials
+sh ./release-to-chrome-web-store.sh
 ```
 
 ## Features
