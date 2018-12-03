@@ -1,6 +1,6 @@
 # Chrome DevTools JSON Viewer
 
-![Screenshot](./screenshot1.jpg)
+![Screenshot](./screenshot1.jpg =400x)
 
 ## Getting started
 
