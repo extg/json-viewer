@@ -2,6 +2,7 @@
   "name": "json-viewer",
   "version": "0.0.1",
   "private": true,
+  "main": "sr/main.js",
   "devDependencies": {
     "chrome-scripts": "1.1.5"
   },

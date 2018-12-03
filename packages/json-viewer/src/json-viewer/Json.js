@@ -3,7 +3,7 @@
 import React from 'react';
 import cn from 'classnames/bind';
 
-import getComputedTypeOrValue, {getType} from '../getComputedTypeOrValue';
+import getComputedTypeOrValue, {getType} from './getComputedTypeOrValue';
 import css from './Json.module.css';
 
 const cx = cn.bind(css)
@@ -55,34 +55,42 @@ class Json extends React.Component {
     let typeValue = getComputedTypeOrValue(dataObject, isClosed);
     const className = cx('root', {
       hasToggler: !Object.isSealed(dataObject),
-      closed: isClosed
+      closed: isClosed,
+      // TODO: вынести plainText в отдельный компонент
+      plainText: this.props.plainText,
     });
 
     if (type === 'Object') {
       typeValue = toJson(dataObject)
     }
 
-    if (css) {
+    if (this.props.plainText) {
       return (
-        <ol className={className}>
-          <li className={css.nameAndValue} onClick={this.clickHandler}>
-            {isClosed ? <ClosedIcon/> : <OpenIcon/>}
-
-            {/* Не выводим indexKey, если его нет (у rootNode) */}
-            {!!indexKey && <span className={css.name}>{indexKey}</span>}
-            {!!indexKey && ': '}
-
-            <span className={cx('value', {type})} style={{color: mapTypeToColor(type)}}>{typeValue}</span>
-          </li>
-
-          {!isClosed && !Object.isSealed(dataObject) && Object.keys(dataObject).sort(Number).map(key => <Json
-            key={key}
-            indexKey={key}
-            dataObject={dataObject[key]}
-          />)}
-        </ol>
-      );
+        <div className={className}>
+          {JSON.stringify(dataObject, null, 2)}
+        </div>
+      )
     }
+
+    return (
+      <ol className={className}>
+        <li className={css.nameAndValue} onClick={this.clickHandler}>
+          {isClosed ? <ClosedIcon/> : <OpenIcon/>}
+
+          {/* Не выводим indexKey, если его нет (у rootNode) */}
+          {!!indexKey && <span className={css.name}>{indexKey}</span>}
+          {!!indexKey && ': '}
+
+          <span className={cx('value', {type})} style={{color: mapTypeToColor(type)}}>{typeValue}</span>
+        </li>
+
+        {!isClosed && !Object.isSealed(dataObject) && Object.keys(dataObject).sort(Number).map(key => <Json
+          key={key}
+          indexKey={key}
+          dataObject={dataObject[key]}
+        />)}
+      </ol>
+    );
   }
 }
 

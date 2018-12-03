@@ -48,3 +48,11 @@ document.onreadystatechange = function () {
         }
     }
 };
+
+let plainText = true;
+chrome.runtime.onMessage.addListener((message) => {
+  // console.log('chrome.runtime.onMessage', message)
+  render(window.json, {plainText});
+
+  plainText = !plainText;
+});
