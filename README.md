@@ -2,6 +2,7 @@
 
 <image src="screenshot1.jpg" width="400"/>
 
+
 ## Getting started
 
 ```sh
@@ -46,4 +47,16 @@ sh ./release-to-chrome-web-store.sh
 
 ## Features
 
+- [x] Toggle mode on click the action button.
 - [ ] Добавить поддержку синтаксиса [react-json-view](https://mac-s-g.github.io/react-json-view/demo/dist/)
+
+
+## Links
+
+- [create-react-typescript-sass-webextension](https://github.com/crimx/create-react-typescript-sass-webextension)
+  Boilerplate for building webextension targeting Chrome & Firefox, using React, TypeScript and Sass
+- [chrome-extension-webpack-boilerplate](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate)
+  A basic foundation boilerplate for rich Chrome Extensions using Webpack to help you write modular and modern
+  Javascript code, load CSS easily and automatic reload the browser on code changes.
+- [Awesome-JSON-Viewer](https://github.com/rbrahul/Awesome-JSON-Viewer)
+  A Chrome extension to visualize JSON response and introduce awesome JSON prettyfying experiences.
