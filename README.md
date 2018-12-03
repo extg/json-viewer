@@ -1,5 +1,7 @@
 # Chrome DevTools JSON Viewer
 
+![Screenshot](./screenshot.jpg)
+
 ## Getting started
 
 Install dependencies and bootstrap packages.
