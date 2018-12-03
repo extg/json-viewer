@@ -15,10 +15,8 @@
   "scripts": {
     "start": "chrome-scripts start",
     "build": "chrome-scripts build",
-    "postbuild": "npm run chrome-ready",
     "test": "chrome-scripts test --env=jsdom",
-    "eject": "chrome-scripts eject",
-    "chrome-ready": "node chrome-ready.js"
+    "eject": "chrome-scripts eject"
   },
   "babel": {
     "presets": [

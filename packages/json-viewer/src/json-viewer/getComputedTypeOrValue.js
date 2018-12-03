@@ -20,7 +20,7 @@ export const getType = (dataObject) => {
 const getComputedTypeOrValue = (dataObject, isClosed) => {
   switch (getType(dataObject)) {
     case 'Array':
-      return `Array[${dataObject.length}]`
+      return `Array(${dataObject.length})`
     case 'Object':
       return isClosed ? JSON.stringify(dataObject) : ''
     case 'String':

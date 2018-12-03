@@ -7,6 +7,9 @@
     "build": "cd ./packages/json-viewer && yarn build"
   },
   "devDependencies": {
-    "lerna": "^3.5.1"
+    "copy-webpack-plugin": "^4.6.0",
+    "lerna": "^3.5.1",
+    "webpack-chrome-extension-reloader": "^1.0.0",
+    "write-file-webpack-plugin": "^4.5.0"
   }
 }

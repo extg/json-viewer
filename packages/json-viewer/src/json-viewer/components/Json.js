@@ -1,14 +1,12 @@
 
 
 import React from 'react';
-import cn from 'classnames';
-import _cn from 'classnames/bind';
+import cn from 'classnames/bind';
 
 import getComputedTypeOrValue, {getType} from '../getComputedTypeOrValue';
 import css from './Json.module.css';
 
-console.log(css)
-const cx = _cn.bind(css)
+const cx = cn.bind(css)
 
 const ClosedIcon = () => (
   <span className={css.icon}>
@@ -55,9 +53,9 @@ class Json extends React.Component {
     const {indexKey, dataObject, isClosed} = this.state;
     const type = getType(dataObject);
     let typeValue = getComputedTypeOrValue(dataObject, isClosed);
-    const className = cn(css.root, {
-      [css.hasToggler]: !Object.isSealed(dataObject),
-      [css.closed]: isClosed
+    const className = cx('root', {
+      hasToggler: !Object.isSealed(dataObject),
+      closed: isClosed
     });
 
     if (type === 'Object') {
@@ -74,7 +72,7 @@ class Json extends React.Component {
             {!!indexKey && <span className={css.name}>{indexKey}</span>}
             {!!indexKey && ': '}
 
-            <span className={cn(css.value, type)} style={{color: mapTypeToColor(type)}}>{typeValue}</span>
+            <span className={cx('value', {type})} style={{color: mapTypeToColor(type)}}>{typeValue}</span>
           </li>
 
           {!isClosed && !Object.isSealed(dataObject) && Object.keys(dataObject).sort(Number).map(key => <Json

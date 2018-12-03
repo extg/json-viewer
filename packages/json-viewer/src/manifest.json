@@ -1,8 +1,7 @@
 {
-  "name": "JSON Viewer Awesome",
+  "name": "Chrome DevTools JSON Viewer",
   "short_name": "JSON Viewer",
   "offline_enabled": true,
-  "version": "1.0.6",
   "manifest_version": 2,
   "icons": {
     "16": "icons/icon-16.png",
@@ -21,19 +20,15 @@
         "https://*/*"
       ],
       "js": [
-        "static/js/contentScript.js",
+        "/static/js/contentScript.js",
         "/static/js/main.js"
       ],
       "run_at": "document_start",
       "all_frames": true
     }
   ],
-  "browser_action": {
-    "default_icon": "icons/icon-16.png"
-  },
   "web_accessible_resources": [
     "/static/js/main.js",
-    "static/css/main.css",
-    "static/css/themes/mdn.css"
+    "/static/css/main.css"
   ]
 }

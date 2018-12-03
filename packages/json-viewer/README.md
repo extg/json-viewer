@@ -1,4 +1,4 @@
-## Chromium DevTools JSON Viewer
+## Chrome DevTools JSON Viewer
 
 A chrome extension to visualize JSON response as well as DevTools.
 

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function initApplication() {
     var styleTag = document.createElement('link');
     var customStyleTag = document.createElement('style');
@@ -28,42 +30,6 @@ function initApplication() {
         document.querySelector('html').appendChild(body)
     }
 };
-const applyOptions = (options) => {
-    const themes = {
-        default: 'main.css',
-        mdn: 'mdn.css'
-    }
-    const styleNode = document.getElementById('main-css');
-    const customScriptNode = document.getElementById('custom-script');
-    const cssURL = chrome.extension.getURL('/static/css/' + themes[options.theme]);
-
-    if (styleNode.href.indexOf(themes[options.theme] < 0)) {
-        styleNode.setAttribute('href', cssURL);
-    }
-    document.getElementById('custom-css').innerHTML = options.css;
-    customScriptNode.innerHTML = 'window.extensionOptions = ' + JSON.stringify(options, null, 2);
-    // setTimeout((options) => {
-    //     document.getElementById('option-menu').setAttribute('href', options.optionPageURL);
-    //     document.getElementById('option-menu-icon').setAttribute('src', options.optionIconURL);
-    //     document.getElementById('option-menu-icon').style.display = 'block';
-    // }, 3 * 1000, options);
-};
-
-const messageReceiver = () => {
-    chrome.runtime.onMessage.addListener((message) => {
-        switch (message.action) {
-            case 'options_received':
-                window.extensionOptions = message.options;
-                applyOptions(message.options);
-                break;
-
-            default:
-                break;
-        }
-    });
-};
-
-messageReceiver();
 
 function isJSONResponsePageOnly() {
     var content = document.body.textContent.trim();
@@ -78,7 +44,6 @@ function isJSONResponsePageOnly() {
 document.onreadystatechange = function () {
     if (document.readyState === "interactive") {
         if (isJSONResponsePageOnly()) {
-            chrome.runtime.sendMessage({ action: 'give_me_options' });
             initApplication();
         }
     }

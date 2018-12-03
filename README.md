@@ -1,4 +1,4 @@
-# Chromium DevTools Json Viewer
+# Chrome DevTools JSON Viewer
 
 ## Getting started
 
