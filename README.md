@@ -45,6 +45,7 @@ cp .env.example .env
 sh ./release-to-chrome-web-store.sh
 ```
 
+
 ## Features
 
 - [x] Toggle mode on click the action button.
