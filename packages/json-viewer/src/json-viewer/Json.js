@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import cn from 'classnames/bind';
 
@@ -84,25 +82,29 @@ class Json extends React.Component {
           <span className={cx('value', {type})} style={{color: mapTypeToColor(type)}}>{typeValue}</span>
         </li>
 
-        {!isClosed && !Object.isSealed(dataObject) && Object.keys(dataObject).sort(Number).map(key => <Json
-          key={key}
-          indexKey={key}
-          dataObject={dataObject[key]}
-        />)}
+        {!isClosed && !Object.isSealed(dataObject) && Object.keys(dataObject).sort(Number).map(key => (
+          <Json
+            key={key}
+            indexKey={key}
+            dataObject={dataObject[key]}
+          />
+        ))}
       </ol>
     );
   }
 }
+
+const eq = ': ';
+const sep = ', ';
 
 const toJson = obj => (
   <span className={css.toJson}>
     {'{'}
     {!Object.isSealed(obj) && Object.keys(obj).sort(Number).map(key => ([
       <span className={css.name}>{key}</span>,
-      ': ',
+      eq,
       <span style={{color: mapTypeToColor(getType(obj[key]))}}>{JSON.stringify(obj[key])}</span>,
-      ', '
-    ]))}
+    ])).reduce((a, b) => [a, sep, b])}
     {'}'}
   </span>
 )

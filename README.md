@@ -49,6 +49,7 @@ sh ./release-to-chrome-web-store.sh
 ## Features
 
 - [x] Toggle mode on click the action button.
+- [ ] Apply extension only if available
 - [ ] Добавить поддержку синтаксиса [react-json-view](https://mac-s-g.github.io/react-json-view/demo/dist/)
 
 
