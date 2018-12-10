@@ -15,7 +15,7 @@ echo "Packing v$VERSION ..."
 
 FILEPATH="$(pwd)/dist/Release-v$VERSION.zip"
 rm $FILEPATH &>/dev/null
-cd $EXTENSION_PATH && zip $FILEPATH * --no-dir-entries --exclude *.sh *.zip
+cd $EXTENSION_PATH && zip -r $FILEPATH * --exclude *.sh *.zip
 echo "=> Built package for Chrome Web Store, to: $FILEPATH"
 
 exit 0
