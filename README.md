@@ -49,9 +49,14 @@ sh ./release-to-chrome-web-store.sh
 ## Features
 
 - [x] Toggle mode on click the action button.
-- [ ] Apply extension only if available
+- [x] Apply extension only if available
 - [ ] Добавить поддержку синтаксиса [react-json-view](https://mac-s-g.github.io/react-json-view/demo/dist/)
-
+- [ ] Сделать страницу настроек (options) и выбор темы на ней 
+- [ ] Сделать обзор решений для парсинга и отображения html
+- [ ] Составить список "аналогов", посмотреть у них issue, может что интересного предлагают
+- [ ] Добавить поддержку jsonp
+- [ ] Добавить поддержку подветки синтаксиса "raw" файлов (например, если открыть raw view в github)
+- [ ] В иконке приложения выводить статус применения преобразований (зеленый все ок, желтый/красный с ошибками, серый применение недоступно на данной странице)
 
 ## Links
 
