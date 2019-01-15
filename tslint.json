@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-config-standard"],
+  "extends": ["tslint-config-airbnb", "tslint-react", "tslint-config-prettier"],
   "rules": {
     "trailing-comma": false
   },
