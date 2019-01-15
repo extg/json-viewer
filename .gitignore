@@ -12,5 +12,12 @@ dist
 # misc
 .idea
 .env
+.vscode
 npm-debug.log
 *.zip
+
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
