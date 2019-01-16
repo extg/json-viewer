@@ -74,6 +74,8 @@ function build(previousFileSizes) {
 
   let compiler = webpack(config)
 
+  console.log('compiler.options.mode', compiler.options.mode)
+
   compiler.watch({ignored: /node_modules/}, (err, stats) => {
     if (err) {
       return printBuildError(err)

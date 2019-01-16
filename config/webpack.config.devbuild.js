@@ -9,7 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ChromeExtensionReloader  = require('webpack-chrome-extension-reloader');
 const paths = require('./paths')
 const getClientEnvironment = require('./env')
 const argv = require('minimist')(process.argv.slice(2))
@@ -56,6 +56,7 @@ const entries = fs.readdirSync(paths.appSrc)
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
 module.exports = {
+  // mode: 'development',
   // Don't attempt to continue if there are any errors.
   bail: true,
   // We generate sourcemaps in production. This is slow but gives good results.
@@ -258,6 +259,21 @@ module.exports = {
     ],
   },
   plugins: [
+    // TODO:
+    // ChromeExtensionReloader runs only with --mode=development
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     mode: 'development',
+    //   },
+    // }),
+    // new ChromeExtensionReloader({
+    //   port: 9090, // Which port use to create the server
+    //   reloadPage: true, // Force the reload of the page also
+    //   entries: { // The entries used for the content/background scripts
+    //     contentScript: 'content', // Use the entry names, not the file name or the path
+    //     background: 'background' // *REQUIRED
+    //   }
+    // }),
     new ForkTsCheckerWebpackPlugin({tslint: true, async: true}),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
