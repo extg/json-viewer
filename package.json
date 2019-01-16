@@ -1,7 +1,6 @@
 {
-  "name": "create-react-typescript-sass-webextension",
+  "name": "json-viewer",
   "version": "0.1.0",
-  "description": "Boilerplate for building webextension targeting Chrome & Firefox with react, typescript and sass",
   "private": true,
   "scripts": {
     "start": "node scripts/start.js",
@@ -26,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/crimx/create-react-typescript-sass-webextension"
+    "url": "https://github.com/extg/json-viewer"
   },
-  "homepage": "https://github.com/crimx/create-react-typescript-sass-webextension",
+  "homepage": "https://github.com/extg/json-viewer",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/crimx/create-react-typescript-sass-webextension/issues"
+    "url": "https://github.com/extg/json-viewer/issues"
   },
   "config": {
     "commitizen": {
@@ -73,7 +72,7 @@
     "dotenv": "5.0.0",
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "^1.1.6",
-    "fork-ts-checker-webpack-plugin": "^0.3.0",
+    "fork-ts-checker-webpack-plugin": "^0.5.2",
     "fs-extra": "^5.0.0",
     "generate-json-webpack-plugin": "^0.2.2",
     "html-webpack-plugin": "^2.30.1",
@@ -95,15 +94,15 @@
     "standard-version": "^4.3.0",
     "style-loader": "^0.20.0",
     "text-transform-loader": "^2.0.0",
-    "ts-jest": "^22.0.0",
+    "ts-jest": "^23.10.5",
     "ts-lint": "^4.5.1",
     "ts-loader": "^3.2.0",
-    "tslint": "^5.8.0",
+    "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^7.0.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.6.2",
+    "typescript": "^3.2.2",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "0.6.2",
     "webpack": "^3.10.0",

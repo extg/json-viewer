@@ -1,21 +1,18 @@
-import render from "./render";
-
-window.render = () => {};
+import render from './render';
 
 window.addEventListener(
-  "DOMContentLoaded",
+  'DOMContentLoaded',
   () => {
-    const content = document.body.textContent || "";
+    const content = document.body.textContent || '';
     try {
       const jsonData = JSON.parse(content.trim());
-      window.render = render;
-      window.json = jsonData;
+      console.log(window.document);
 
       console.log(jsonData);
       render(jsonData);
     } catch (e) {
-      console.error("JSON parsing failed", e);
+      console.error('JSON parsing failed', e);
     }
   },
-  false
+  false,
 );
