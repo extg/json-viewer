@@ -1,18 +1,12 @@
 import render from './render';
 
-window.addEventListener(
-  'DOMContentLoaded',
-  () => {
-    const content = document.body.textContent || '';
-    try {
-      const jsonData = JSON.parse(content.trim());
-      console.log(window.document);
+const content = document.body.textContent || '';
+try {
+  const jsonData = JSON.parse(content.trim());
+  console.log(window.document);
 
-      console.log(jsonData);
-      render(jsonData);
-    } catch (e) {
-      console.error('JSON parsing failed', e);
-    }
-  },
-  false,
-);
+  console.log(jsonData);
+  render(jsonData);
+} catch (e) {
+  console.error('JSON parsing failed', e);
+}
