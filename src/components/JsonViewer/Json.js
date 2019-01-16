@@ -1,13 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import cn from 'classnames/bind';
 
 import getComputedTypeOrValue, { getType } from './getComputedTypeOrValue';
-import css from './Json.module.css';
-
-const cx = cn.bind(css);
+import './Json.module.css';
 
 const ClosedIcon = () => (
-  <span className={css.icon}>
+  <span className={'icon'}>
     <svg
       width="16"
       height="16"
@@ -19,7 +18,7 @@ const ClosedIcon = () => (
   </span>
 );
 const OpenIcon = () => (
-  <span className={css.icon}>
+  <span className={'icon'}>
     <svg
       width="16"
       height="16"
@@ -64,7 +63,7 @@ class Json extends React.Component {
     const { indexKey, dataObject, isClosed } = this.state;
     const type = getType(dataObject);
     let typeValue = getComputedTypeOrValue(dataObject, isClosed);
-    const className = cx('root', {
+    const className = cn('root', {
       hasToggler: !Object.isSealed(dataObject),
       closed: isClosed,
       // TODO: вынести plainText в отдельный компонент
@@ -83,15 +82,15 @@ class Json extends React.Component {
 
     return (
       <ol className={className}>
-        <li className={css.nameAndValue} onClick={this.clickHandler}>
+        <li className={'nameAndValue'} onClick={this.clickHandler}>
           {isClosed ? <ClosedIcon /> : <OpenIcon />}
 
           {/* Не выводим indexKey, если его нет (у rootNode) */}
-          {!!indexKey && <span className={css.name}>{indexKey}</span>}
+          {!!indexKey && <span className={'name'}>{indexKey}</span>}
           {!!indexKey && ': '}
 
           <span
-            className={cx('value', { type })}
+            className={cn('value', { type })}
             style={{ color: mapTypeToColor(type) }}
           >
             {typeValue}
@@ -114,13 +113,13 @@ const eq = ': ';
 const sep = ', ';
 
 const toJson = obj => (
-  <span className={css.toJson}>
+  <span className={'toJson'}>
     {'{'}
     {!Object.isSealed(obj) &&
       Object.keys(obj)
         .sort(Number)
         .map(key => [
-          <span className={css.name}>{key}</span>,
+          <span className={'name'}>{key}</span>,
           eq,
           <span style={{ color: mapTypeToColor(getType(obj[key])) }}>
             {JSON.stringify(obj[key])}
