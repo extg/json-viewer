@@ -1,10 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
-import ReactJson from "react-json-view";
 import theme from "./theme";
-
-import JsonViewer from "../components/JsonViewer";
 
 const getRoot = (id = "chrome-json-viewer-root") => {
   let root = document.getElementById(id);
@@ -21,13 +18,24 @@ const getRoot = (id = "chrome-json-viewer-root") => {
 
 const render = (
   dataObject: object = {},
-  { component: Component = JsonViewer, plainText = "" } = {}
+  {
+    component: Component = JsonViewer,
+    plainText = "",
+    componentProps = {}
+  } = {}
 ) => {
   const root = getRoot();
-  console.log("render");
+
+  console.log(componentProps);
+
   ReactDOM.render(
     <ThemeProvider theme={theme}>
-      <ReactJson src={dataObject} plainText={plainText} />
+      <Component
+        {...componentProps}
+        dataObject={dataObject}
+        src={dataObject}
+        plainText={plainText}
+      />
     </ThemeProvider>,
     root
   );
