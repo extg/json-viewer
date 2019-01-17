@@ -1,26 +1,25 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import styled from "styled-components";
-import { RadioGroup, Radio } from "react-radio-group";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import styled from 'styled-components';
+import { RadioGroup, Radio } from 'react-radio-group';
 
-import ReactJsovViewOption from "./ReactJsovViewOption";
+import ReactJsonViewOption from './ReactJsonViewOption';
+import JsonViewerOption from './JsonViewerOption';
 
 const Container = styled.div`
-  min-width: 500px;
+  min-width: 600px;
+  max-width: 600px;
   max-height: 100vh;
   padding: 16px;
 
   overflow: scroll;
 `;
 
-class SettingsPage extends React.PureComponent<
-  {},
-  { variant: string; componentProps: object }
-> {
+class SettingsPage extends React.PureComponent<{}, { variant: string; componentProps: object }> {
   constructor(props) {
     super(props);
 
-    this.state = { variant: "devtools", componentProps: {} };
+    this.state = { variant: 'devtools', componentProps: {} };
   }
 
   handleRadioChange = e => this.setState({ variant: e });
@@ -35,12 +34,12 @@ class SettingsPage extends React.PureComponent<
 
     const settingsComponent = React.cloneElement(
       {
-        devtools: <div />,
-        reactjson: <ReactJsovViewOption />
+        devtools: <JsonViewerOption />,
+        reactjson: <ReactJsonViewOption />,
       }[variant],
       {
-        saveComponentProps: this.saveComponentProps
-      }
+        saveComponentProps: this.saveComponentProps,
+      },
     );
 
     return (
@@ -64,6 +63,4 @@ class SettingsPage extends React.PureComponent<
   }
 }
 
-ReactDOM.render(<SettingsPage />, document.getElementById(
-  "root"
-) as HTMLElement);
+ReactDOM.render(<SettingsPage />, document.getElementById('root') as HTMLElement);

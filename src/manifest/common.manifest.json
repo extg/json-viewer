@@ -3,9 +3,9 @@
   "short_name": "JSON Viewer",
   "offline_enabled": true,
   "icons": {
-    "16": "static/logo.png",
-    "48": "static/logo.png",
-    "128": "static/logo.png"
+    "16": "/static/icon-16.png",
+    "48": "/static/icon-48.png",
+    "128": "/static/icon-128.png"
   },
 
   "background": {
@@ -22,13 +22,9 @@
   ],
 
   "browser_action": {
-    "default_icon": {
-      "19": "static/logo.png",
-      "38": "static/logo.png"
-    },
-    "default_popup": "popup.html"
+    "default_icon": "static/icon-128.png"
   },
   "permissions": ["storage", "tabs", "activeTab"],
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' ./*.js 'unsafe-inline'; font-src *"
+  "content_security_policy": "script-src 'self' ./*.js 'unsafe-inline'; font-src *; object-src 'none';"
 }

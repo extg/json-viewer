@@ -1,1 +1,1 @@
-export {default} from './StyledJsonViewer'
+export {default} from './JsonViewer'
