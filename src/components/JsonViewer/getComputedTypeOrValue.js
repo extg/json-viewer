@@ -1,5 +1,3 @@
-
-
 import TYPES from './types'
 
 export const getType = (dataObject) => {
