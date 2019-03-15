@@ -20,7 +20,7 @@ try {
     render({ src: jsonData, component: getComponent(variant), ...componentProps }),
   );
 } catch (e) {
-  console.error('JSON parsing failed', e);
+  // console.error('JSON parsing failed', e);
 }
 
 chrome.runtime.onMessage.addListener(props => {

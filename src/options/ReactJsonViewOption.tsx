@@ -4,7 +4,7 @@ import ReactJson from 'react-json-view';
 
 import exampleJson from './exampleJson';
 
-export default class extends React.Component {
+export default class extends React.Component<any> {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ export default class extends React.Component {
       collapsed,
       indentWidth,
       displayDataTypes,
-    } = this.state;
+    } = this.state as any;
 
     const style = {
       padding: '10px',
